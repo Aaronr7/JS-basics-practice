@@ -49,15 +49,14 @@ window.onload = function() {
     
     //Button logic
     let toggleButton = document.querySelector(".remover-button");
-    toggleButton.addEventListener("click", () => {
-        
-        
-        if (document.querySelector(".list-parent").hasChildNodes()) {
-            removeElement(".list-parent",".list");
-        }
+    toggleButton.addEventListener("onclick", () => {
 
         if (!document.querySelector(".list-parent").hasChildNodes()) {
             addUList();
+        }
+
+        if (document.querySelector(".list-parent").hasChildNodes()) {
+            removeElement(".list-parent",".list");
         }
             
     });
