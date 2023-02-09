@@ -54,6 +54,12 @@ window.onload = function() {
 
         if (document.querySelector(".list-parent").children.length === 0) {
             addUList();
+            let nestedUlist = document.querySelector(".list");
+            nestedUlist.childNodes.forEach((liChild) => {
+                liChild.style.backgroundColor = "yellow";
+                liChild.style.padding = "10px";
+                liChild.style.borderRadius = "3px";
+            });
         } else {
             removeElement(".list-parent",".list");
         }
