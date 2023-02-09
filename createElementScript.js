@@ -20,5 +20,5 @@ window.onload = function() {
     
     //Button logic
     let removerButton = document.querySelector(".remover-button");
-    button.addEventListener("click", removeElement(".list-parent",".list"));
+    removerButton.addEventListener("click", removeElement(".list-parent",".list"));
     };
