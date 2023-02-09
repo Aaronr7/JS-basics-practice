@@ -12,7 +12,7 @@ window.onload = function() {
     const removeElement = (elementParentClass, childElementClass) => {
         let parent = document.querySelector(elementParentClass);
         let child = document.querySelector(childElementClass);
-        parent.removeChild(child);
+        let throwawayNode = parent.removeChild(child);
     }
     
     addElement("div", "Hi there! This text bring to the page by method createTextNode");
