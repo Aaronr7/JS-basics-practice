@@ -10,7 +10,7 @@ window.onload = function() {
     };
     
     const removeElement = (elementParentClass, childElementClass) => {
-        let parent = document.querySeletor(elementParentClass);
+        let parent = document.querySelector(elementParentClass);
         let child = document.querySelector(childElementClass);
         parent.removeChild(child);
     }
