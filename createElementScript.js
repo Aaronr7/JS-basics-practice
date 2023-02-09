@@ -8,6 +8,22 @@ window.onload = function() {
     
         document.body.appendChild(newDiv);
     };
+
+    const addUList = () => {
+        const newUl = document.createElement("ul");
+
+        let newLi = document.createElement("li");
+    
+        let newContent = document.createTextNode("🍎");
+        newLi.appendChild(newContent);
+        newUl.appendChild(newLi);
+
+        newContent = document.createTextNode("🍒");
+        newLi.appendChild(newContent);
+        newUl.appendChild(newLi);
+    
+        document.querySelector(".list-parent").appendChild(newUl);
+    };
     
     const removeElement = (elementParentClass, childElementClass) => {
         let parent = document.querySelector(elementParentClass);
