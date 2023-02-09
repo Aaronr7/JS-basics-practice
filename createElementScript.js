@@ -11,17 +11,33 @@ window.onload = function() {
 
     const addUList = () => {
         const newUl = document.createElement("ul");
+        newUl.classList.add("list");
 
         let newLi = document.createElement("li");
-    
         let newContent = document.createTextNode("🍎");
         newLi.appendChild(newContent);
         newUl.appendChild(newLi);
 
+        newLi = document.createElement("li");
         newContent = document.createTextNode("🍒");
         newLi.appendChild(newContent);
         newUl.appendChild(newLi);
-    
+        
+        newLi = document.createElement("li");
+        newContent = document.createTextNode("🍑");
+        newLi.appendChild(newContent);
+        newUl.appendChild(newLi);
+
+        newLi = document.createElement("li");
+        newContent = document.createTextNode("🍉");
+        newLi.appendChild(newContent);
+        newUl.appendChild(newLi);
+
+        newLi = document.createElement("li");
+        newContent = document.createTextNode("🍇");
+        newLi.appendChild(newContent);
+        newUl.appendChild(newLi);
+
         document.querySelector(".list-parent").appendChild(newUl);
     };
     
@@ -32,6 +48,17 @@ window.onload = function() {
     }
     
     //Button logic
-    let removerButton = document.querySelector(".remover-button");
-    removerButton.addEventListener("click", () => removeElement(".list-parent",".list"));
+    let toggleButton = document.querySelector(".remover-button");
+    toggleButton.addEventListener("click", () => {
+        
+        
+        if (document.querySelector(".list-parent").hasChildNodes()) {
+            removeElement(".list-parent",".list");
+        }
+
+        if (!document.querySelector(".list-parent").hasChildNodes()) {
+            addUList();
+        }
+            
+    });
     };
