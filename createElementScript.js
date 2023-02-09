@@ -19,6 +19,6 @@ window.onload = function() {
     addElement("section", "This is a section.");
     
     //Button logic
-    let button = document.querySelector(".button");
+    let removerButton = document.querySelector(".remover-button");
     button.addEventListener("click", removeElement(".list-parent",".list"));
     };
