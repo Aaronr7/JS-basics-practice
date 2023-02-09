@@ -51,11 +51,11 @@ window.onload = function() {
     let toggleButton = document.querySelector(".remover-button");
     toggleButton.addEventListener("onclick", () => {
 
-        if (!document.querySelector(".list-parent").hasChildNodes()) {
+        if (document.querySelector(".list-parent").children.length === 0) {
             addUList();
         }
 
-        if (document.querySelector(".list-parent").hasChildNodes()) {
+        if (document.querySelector(".list-parent").children.length === 1) {
             removeElement(".list-parent",".list");
         }
             
