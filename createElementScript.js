@@ -47,15 +47,14 @@ window.onload = function() {
         let throwawayNode = parent.removeChild(child);
     }
     
+   
     //Button logic
     let toggleButton = document.querySelector(".remover-button");
-    toggleButton.addEventListener("onclick", () => {
+    toggleButton.addEventListener("click", () => {
 
         if (document.querySelector(".list-parent").children.length === 0) {
             addUList();
-        }
-
-        if (document.querySelector(".list-parent").children.length === 1) {
+        } else {
             removeElement(".list-parent",".list");
         }
             
